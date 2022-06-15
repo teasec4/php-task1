@@ -35,17 +35,31 @@
             <!-- Получаем произведение a b и проверяем разряд числа -->
             <?php
                 $answer = $a * $b; // результат произведения
-                
-            // Проверяем разряд числа и выводим ответ
-                if(strlen($answer) == 1) {
-                    echo "$answer, это однозначное число";
-                } elseif (strlen($answer) == 2) {
-                    echo "$answer, это двухзначное число";
-                } elseif (strlen($answer) == 3) {
-                    echo "$answer, это трехзначное число";
+            // Проверяем разряд числа и выводим
+
+                if($a < 0 or $b < 0){
+                    if(strlen($answer)-1 == 1) {
+                        echo "$answer, это однозначное число";
+                    } elseif (strlen($answer)-1 == 2) {
+                        echo "$answer, это двухзначное число";
+                    } elseif (strlen($answer)-1 == 3) {
+                        echo "$answer, это трехзначное число";
+                    } else {
+                        echo "$answer, это более чем трехзначное число";
+                    }  
                 } else {
-                    echo "$answer, это более чем трехзначное число";
-                }   
+                    if(strlen($answer) == 1) {
+                        echo "$answer, это однозначное число";
+                    } elseif (strlen($answer) == 2) {
+                        echo "$answer, это двухзначное число";
+                    } elseif (strlen($answer) == 3) {
+                        echo "$answer, это трехзначное число";
+                    } else {
+                        echo "$answer, это более чем трехзначное число";
+                    }  
+                }
+
+                 
             ?>
         </p>
     </div>
