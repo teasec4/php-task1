@@ -13,21 +13,20 @@
     $c = ($_GET['c']);
 ?>
 
-<form method="POST" action="2.php">
+<form method="POST" action="2.php?<?php echo "c=$c" ?>">
     <p>
         a: <input type="text" name='a' value="<?php echo $a ?>"/>
     </p>
     <p>
         b: <input type="text" name='b' value="<?php echo $b ?>"/>
-    </p>
-    <p>
-        c: <input type="text" name='c' value="<?php echo $c ?>"/>
-    </p>
-    
+    </p>   
     <p>
         <input type="submit" value="ok"/>
     </p>
 </form>
+<p>
+    c: <?php echo $c ?>
+ </p>
 
 </body>
 </html>

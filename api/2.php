@@ -1,7 +1,7 @@
 <?php 
 $a =  htmlspecialchars($_POST['a']);
 $b =  htmlspecialchars($_POST['b']);
-$c =  htmlspecialchars($_POST['c']);
+$c =  htmlspecialchars($_GET['c']);
 $answer = $a * $b + $c;
 $_GET = $answer;
 ?>
