@@ -34,31 +34,25 @@
         <p>a умножить на b:
             <!-- Получаем произведение a b и проверяем разряд числа -->
             <?php
-                $answer = $a * $b; // результат произведения
-            // Проверяем разряд числа и выводим
+                // результат произведения
+                $answer = $a * $b; 
 
-                if($a < 0 or $b < 0){
-                    if(strlen($answer)-1 == 1) {
-                        echo "$answer, это однозначное число";
-                    } elseif (strlen($answer)-1 == 2) {
-                        echo "$answer, это двухзначное число";
-                    } elseif (strlen($answer)-1 == 3) {
-                        echo "$answer, это трехзначное число";
-                    } else {
-                        echo "$answer, это более чем трехзначное число";
-                    }  
+                // убираем из ответа знак минус 
+                $net_minusu = str_replace('-', "", $answer);
+                
+                // считаем кол-во символов
+                $len = strlen($net_minusu);
+
+                // Проверяем разряд числа и выводим ответ
+                if($len == 1){
+                    echo "$answer, это однозначное число";
+                } elseif ($len == 2) {
+                    echo "$answer, это двухзначное число";
+                } elseif ($len == 3){
+                    echo "$answer, это трехзначное число";
                 } else {
-                    if(strlen($answer) == 1) {
-                        echo "$answer, это однозначное число";
-                    } elseif (strlen($answer) == 2) {
-                        echo "$answer, это двухзначное число";
-                    } elseif (strlen($answer) == 3) {
-                        echo "$answer, это трехзначное число";
-                    } else {
-                        echo "$answer, это более чем трехзначное число";
-                    }  
+                    echo "$answer, это более чем трехзначное число";
                 }
-
                  
             ?>
         </p>
