@@ -20,12 +20,15 @@
     <p>
         b: <input type="text" name='b' value="<?php echo $b ?>"/>
     </p>
+    <p>
+        c: <input type="text" name='c' value="<?php echo $c ?>"/>
+    </p>
     
     <p>
         <input type="submit" value="ok"/>
     </p>
 </form>
-<?php echo $c ?>
+
 </body>
 </html>
 
