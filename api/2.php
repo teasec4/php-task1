@@ -1,8 +1,8 @@
 <?php 
 
-$a = $_POST['a'];
-$b = $_POST['b'];
-$c = $_GET['c'];
+$a = $_REQUEST['a'];
+$b = $_REQUEST['b'];
+$c = $_REQUEST['c'];
 
 $answer = $a * $b + $c;
 
