@@ -1,6 +1,6 @@
 
 <?php 
-    echo "1.php <br>";
+    // Получаем перменные через GET
     $a = ($_GET['a']);
     $b = ($_GET['b']);
     $c = ($_GET['c']);
@@ -8,13 +8,14 @@
     echo "b = $b <br>";
     echo "c = $c <br>";
 
+    // собираем данные
     $array = array(
         'a' => $a,
         'b' => $b,
         'c' => $c
     );
 
-    // echo "$array <br>";
+    // делаем ссыоку для отправки данных
     $link = http_build_query($array,'', '&');
 
 

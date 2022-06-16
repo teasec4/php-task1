@@ -1,6 +1,5 @@
 <?php 
 
-echo "2.php <br>";
 $a = ($_POST['a']);
 $b = ($_POST['b']);
 $c = ($_POST['c']);
