@@ -26,7 +26,7 @@
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $link);
     $out = curl_exec($ch);
-    echo $out;
+    echo "Ответ: $out";
     curl_close($ch);
 
 ?>
