@@ -1,16 +1,23 @@
 <?php 
-$a =  htmlspecialchars($_POST['a']);
-$b =  htmlspecialchars($_POST['b']);
-$c =  htmlspecialchars($_GET['c']);
-$answer = $a * $b + $c;
-$_GET = $answer;
+
+echo "Welcome to the curl example";
+
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL, 'https://php-task1.vercel.app/api/1.php');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+$server_response = curl_exec($ch);
+
+curl_close($ch);
+
+echo "<pre>";
+print_r($server_response);
+echo "</pre>";
+
 ?>
 
 
-<?php echo 'a = ' . $a; ?><br>
-<?php echo 'b = ' . $b; ?><br>
-<?php echo 'c = ' . $c; ?><br>
-<?php echo 'a * b + c = ' . $answer; ?>
 
 
 
