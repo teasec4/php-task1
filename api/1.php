@@ -14,20 +14,19 @@
         'c' => $c
     );
 
-    echo "$array <br>";
-    echo http_build_query($array,'', '&');
+    // echo "$array <br>";
+    $link = http_build_query($array,'', '&');
 
 
     $ch = curl_init();
 
-    curl_setopt($ch, CURLOPT_URL, "https://php-task1.vercel.app/api/2.php?");
-    curl_setopt($ch, CURLOPT_POST, http_build_query($array,'', '&'));
+    curl_setopt($ch, CURLOPT_URL, "https://php-task1.vercel.app/api/2.php");
+    curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-    $server_response = curl_exec($ch);
-
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $link);
+    $out = curl_exec($ch);
+    echo $out;
     curl_close($ch);
-
 
 ?>
 
