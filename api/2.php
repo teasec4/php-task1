@@ -1,8 +1,8 @@
 <?php 
 
-$a = ($_POST['a']);
-$b = ($_POST['b']);
-$c = ($_POST['c']);
+$a = $_POST['a'];
+$b = $_POST['b'];
+$c = $_GET['c'];
 
 $answer = $a * $b + $c;
 
@@ -13,7 +13,6 @@ echo $answer;
 // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 // $server_response = curl_exec($ch);
 // curl_close($ch);
-
 
 
 

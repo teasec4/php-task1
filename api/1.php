@@ -8,23 +8,31 @@
     echo "b = $b <br>";
     echo "c = $c <br>";
 
-    // собираем данные
+    // собираем данные в массив
     $array = array(
         'a' => $a,
         'b' => $b,
-        'c' => $c
     );
 
     // делаем ссыоку для отправки данных
     $link = http_build_query($array,'', '&');
 
-
+    // инициализация curl
     $ch = curl_init();
 
-    curl_setopt($ch, CURLOPT_URL, "https://php-task1.vercel.app/api/2.php");
+    // ссылка куда будем обращаться
+    curl_setopt($ch, CURLOPT_URL, "https://php-task1.vercel.app/api/2.php?c=$c");
+
+    // метод POST
     curl_setopt($ch, CURLOPT_POST, 1);
+
+    // получение ответа true
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    // строка с передаваемыми данными
     curl_setopt($ch, CURLOPT_POSTFIELDS, $link);
+
+    // получение ответа 
     $out = curl_exec($ch);
     echo "Ответ: $out";
     curl_close($ch);
