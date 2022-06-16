@@ -17,6 +17,8 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 $server_response = curl_exec($ch);
 
+echo $a * $b + $c ;
+
 curl_close($ch);
 
 

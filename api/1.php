@@ -10,7 +10,7 @@
 
     $ch = curl_init();
 
-    curl_setopt($ch, CURLOPT_URL, "https://php-task1.vercel.app/api/2.php?a=$a&b=$b&c=$c");
+    //curl_setopt($ch, CURLOPT_URL, "https://php-task1.vercel.app/api/2.php?a=$a&b=$b&c=$c");
 
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
